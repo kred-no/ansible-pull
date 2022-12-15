@@ -1,0 +1,9 @@
+- hosts: 127.0.0.1
+  connection: local
+  become: true
+  
+  roles:
+  - role: ansible-pull
+    vars:
+      ansible_pull_url: https://github.com/kred-no/ansible-pull.git
+      ansible_pull_playbook: ubuntu.yaml
